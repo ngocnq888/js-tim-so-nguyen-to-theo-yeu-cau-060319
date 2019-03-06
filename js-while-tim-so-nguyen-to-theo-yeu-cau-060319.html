@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuong Trinh tim so nguyen theo yeu cau nhap vao </title>
+</head>
+<body>
+<h3>Chuong Trinh tim so nguyen theo yeu cau nhap vao </h3>
+<h3>Su dung vong lap While</h3>
+<script>
+    var num = parseInt(prompt());
+    var dem = 0;
+    var tang = 0;
+    while( dem < num){
+        if (timNguyento(tang)) {
+            document.write(' ' + tang + ' ');
+            dem++;
+        }
+        tang ++;
+
+    }
+    function timNguyento(nguyenTo) {
+        let flag = true;
+        if ( nguyenTo > 2){
+            for (let a = 2; a < nguyenTo ; a++ ) {
+
+                if (nguyenTo % a === 0){
+                flag = false;
+
+                }
+
+            }
+        }
+        else if ( nguyenTo < 2)flag = false;
+
+        return flag;
+    }
+
+
+
+
+</script>
+</body>
+</html>
